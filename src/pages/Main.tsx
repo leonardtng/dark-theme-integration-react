@@ -21,22 +21,25 @@ const useStyles = makeStyles((theme: Theme) => ({
 const Main: React.FC = () => {
   const classes = useStyles();
 
+  //If you had any components in your App.tsx before implementing dark theme, you can move them here for them to utilise your newly created color palettes
   return (
     <div className={classes.main}>
-          <NavBar />
+      <NavBar />
       <Grid container spacing={0}>
-
         <Grid item xs={12}>
+          {/* Typography styled in primary color */}
           <Typography variant="h1" component="h1" color="primary">
             Integrating Dark Theme into a React + Material-UI Web Application
           </Typography>
         </Grid>
         <Grid item xs={12}>
+          {/* Typography styled in secondary color */}
           <Typography variant="h3" component="h2" color="secondary">
             A step-by-step guide to integrate dark theme into your React + Material-UI Web Application
           </Typography>
         </Grid>
         <Grid item xs={12}>
+          {/* Typography styled in text color defined in palette by default */}
           <Typography variant="body1" component="p">
             This is in plain text, using the text color of the theme palette. Click on the dark/light theme button at the bottom to switch themes.
           </Typography>

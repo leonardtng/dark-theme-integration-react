@@ -18,7 +18,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   themeToggle: {
     margin: 30,
-    color: theme.palette.background.paper, //You can use any palette properties defined in your theme. I decided to use my 'paper' color here for the theme toggle
+    color: theme.palette.background.paper, 
+    //You can use any palette properties defined in your theme. I decided to use my 'paper' color here for the theme toggle
   }
 }));
 
@@ -28,19 +29,23 @@ const ButtonGroup: React.FC = () => {
 
   return (
     <div className={classes.root}>
+      {/* This button will be in your primary color */}
       <Button className={classes.button} variant="contained" color="primary">
         Primary
       </Button>
+      {/* This button will be in your secondary color */}
       <Button className={classes.button} variant="contained" color="secondary">
         Secondary
       </Button>
       <IconButton className={classes.themeToggle} color="default" onClick={() => toggleTheme()}>
+        {/* This conditional will change the icon displayed depending on which theme is currently active */}
         {lightMode ? (
           <NightsStayIcon />
         ) : (
             <Brightness7Icon />
           )}
       </IconButton>
+      {/* This button will be in a custom color due to the conditional in the inline style */}
       <Button className={classes.button} variant="contained" style={{backgroundColor: lightMode ? '#E27D60' : '#FAED26'}}>
         Custom Color
       </Button>

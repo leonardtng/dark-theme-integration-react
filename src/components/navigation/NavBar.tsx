@@ -22,11 +22,12 @@ const useStyles = makeStyles((theme: Theme) => ({
 const NavBar: React.FC = () => {
   const classes = useStyles();
 
+  // AppBars are created by defualt with your primary color
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <IconButton edge="start" className={classes.menuButton} color="inherit">
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>

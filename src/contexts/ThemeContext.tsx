@@ -1,13 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, createContext, ReactNode } from "react";
 
-export const ThemeContext = React.createContext(
+interface ThemeContextProps {
+  lightMode: boolean;
+  toggleTheme: () => void;
+}
+
+export const ThemeContext = createContext<ThemeContextProps>(
   {
     lightMode: true,
     toggleTheme: () => { },
   }
 )
 
-const ThemeContextProvider: React.FC = (props) => {
+interface ThemeContextProviderProps {
+  children?: ReactNode;
+}
+
+const ThemeContextProvider: React.FC<ThemeContextProviderProps> = (props: ThemeContextProviderProps) => {
 
   const [lightMode, setlightMode] = useState<boolean>(!(localStorage.getItem("theme") === "dark"));
   const toggleTheme = () => {
