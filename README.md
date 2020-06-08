@@ -8,7 +8,7 @@
   Full guide available <a href="https://medium.com/@leonardtng/integrating-dark-theme-into-your-react-and-material-ui-web-application-61eb613865f2?source=friends_link&sk=89d646b9c7316341c9b187cf70832a91" target="_blank"><b>here</b>!</a>
 </p>
 
-![demo](src/assets/images/cover.gif)
+<img src="src/assets/images/cover.gif" width="100%" alt="Cover"/>
 
 ## 👍 How to Use This Repository
 
