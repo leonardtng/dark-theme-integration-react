@@ -55,6 +55,8 @@ const AppTheme: React.FC = () => {
   });
 
   return (
+    // For this example, there is only one page in the website (Main.tsx). If your React app contains routing, you can put your paths in place of Main.tsx
+    // so that each page in the routes can use this theme palette as well.
     <ThemeProvider theme={currentThemeContext.lightMode ? light : dark}>
       <Main />
     </ThemeProvider>

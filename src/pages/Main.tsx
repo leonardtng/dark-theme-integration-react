@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 const Main: React.FC = () => {
   const classes = useStyles();
 
-  //If you had any components in your App.tsx before implementing dark theme, you can move them here for them to utilise your newly created color palettes
+  // If you had any components in your App.tsx before implementing dark theme, you can move them here for them to utilise your newly created color palettes
   return (
     <div className={classes.main}>
       <NavBar />
